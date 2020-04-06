@@ -1,0 +1,2 @@
+Per testare al meglio, dato che non c'è alcun database di guide e turisti dietro è preferibile creare un profilo come guida e uno come turista e poi iniziare a testare le funzionalità.
+Al turista serve almeno una guida e viceversa, altrimenti si ricevono solo messaggi di mancanza di personale.

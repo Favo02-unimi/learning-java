@@ -1,0 +1,19 @@
+Il pronto soccorso è gestito come una coda, rispettando però le priorità stabilite dai codici.
+All'arrivo di un nuovo paziente viene chiesto nome, data di nascita, sesso, se è in gravidanza, se è portatore di handicap (in modo da stabilire se è un paziente fragile), dopodichè viene richiesto se è:
+-in stato molto critico: assegnato codice rosso
+-in stato mediamente critico: assegnato codice arancione
+-in stato poco critico: assegnato codice verde
+-in stato non critico: assegnato codice bianco/azzurro (in base all'identificazione svolta prima).
+Un volta classificato viene aggiunto alla coda, nel punto che gli spetta in base al codice.
+Viene accettato, appena possibile, il primo paziente in coda, il quale esce dalla coda.
+
+In caso di codici uguali ha la precedenza chi arriva prima.
+In caso un paziente sia codice bianco prima di venir inserito in coda è richiesto il pagamento.
+
+La struttura dati che utilizzo per gestire la coda è un semplice ArrayList<Paziente>, si potrebbe utilizzare anche una LinkedList, ma dato che deve sempre venir accettato il primo paziente e non c'è il bisogno di scorrere in diverse direzioni la lista è inutile mettersi a gestire una LinkedList quando basta un array (non scelgo un array normale dato che cambia ogni arrivo/accettazione di un paziente la lunghezza).
+
+Classi:
+-Paziente: il cui attributo principale è il codice, gestito come int
+-Pronto Soccorso: classe che implementa l'ArrayList, che gestisce l'identificazione, l'arrivo (quindi l'inserimento nell'array) e l'accetazione (e quindi la rimozione dall'array) di pazienti
+
+Ho, dopo aver sviluppato funzionante il software in riga di comando, anche un piccola GUI, che semplifica l'utilizzo, sono presenti due bottoni, ognuno con associato un listener (e quindi 2 classi) per le due funzioni del software.
