@@ -1,0 +1,20 @@
+JFrame = finestra
+
+finestra.setDefaultCloseOperation = cosa fa quando si chiude con la X (JFrame.EXIT_ON_CLOSE)
+
+
+Drawing = disegno
+
+disegno.setSize = stabilire dimensioni disegno
+
+finesta.add() = mettere qualcosa nella finestra
+
+finestra.pack() = adatta la finestra alle dimensioni degli oggetti che contiente (in questo caso il disegno)
+
+finestra.setVisible(true); = renderla visibile
+
+metodo paint = viene richiamato ad ogni disegno, per disegnare qualcosa sovrascriverlo. Viene richiamato anche ad ogni ridimensionamento della finestra
+
+fillOval = nuovo ovale pieno (coord x,y + dimensioni)
+fillRect = nuovo rettangolo pieno (coord x,y + dimensioni)
+drawline = nuova retta (x,y partenza + x,y fine)
